@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "the_fireplace.homecamp.HomeCamp"
+    ],
+    "modmenu": [
+      "the_fireplace.homecamp.client.ModMenuIntegration"
     ]
   },
   "mixins": [
@@ -31,5 +34,9 @@
     "fabric": "*",
     "fabric-events-interaction-v0": "*",
     "minecraft": "1.16.2"
+  },
+
+  "suggests": {
+    "modmenu":  ">=4.0.0"
   }
 }

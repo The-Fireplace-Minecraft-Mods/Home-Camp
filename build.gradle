@@ -1,6 +1,6 @@
 plugins {
 	id 'fabric-loom' version '0.4-SNAPSHOT'
-	id 'maven-publish'
+	id "com.matthewprenger.cursegradle" version "1.4.0"
 }
 
 sourceCompatibility = JavaVersion.VERSION_1_8
@@ -18,6 +18,18 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+	modImplementation "io.github.prospector:modmenu:${project.modmenu_version}"
+
+	modApi "me.shedaniel.cloth:config-2:${project.clothconfig_version}"
+	modApi "me.sargunvohra.mcmods:autoconfig1u:${project.autoconfig_version}"
+	include "me.shedaniel.cloth:config-2:${project.clothconfig_version}"
+	include "me.sargunvohra.mcmods:autoconfig1u:${project.autoconfig_version}"
+}
+
+repositories {
+	//Auto config
+	jcenter()
 }
 
 processResources {
@@ -49,26 +61,27 @@ task sourcesJar(type: Jar, dependsOn: classes) {
 }
 
 jar {
-	from "LICENSE"
+	from "LICENSE.md"
 }
 
-// configure the maven publication
-publishing {
-	publications {
-		mavenJava(MavenPublication) {
-			// add all the jars that should be included when publishing to maven
-			artifact(remapJar) {
-				builtBy remapJar
-			}
-			artifact(sourcesJar) {
-				builtBy remapSourcesJar
+curseforge {
+	apiKey = project.hasProperty("curseForgeApiKey") ? project.curseForgeApiKey : "empty"
+	project {
+		//Your curseforge project id here
+		id = '251732'
+		changelog = file('changelog.txt')
+		//release, beta, or alpha
+		releaseType = 'release'
+		addGameVersion '1.16.2'
+		addGameVersion 'Java 8'
+		addGameVersion 'Fabric'
+		mainArtifact(new File(new File(buildDir, "libs"), "$archivesBaseName-${version}.jar")) {
+			displayName = "$archivesBaseName-$version"
+			relations {
+				embeddedLibrary 'cloth-config'
+				embeddedLibrary 'auto-config-updated-api'
+				optionalDependency 'modmenu'
 			}
 		}
-	}
-
-	// select the repositories you want to publish to
-	repositories {
-		// uncomment to publish to the local maven
-		// mavenLocal()
 	}
 }
