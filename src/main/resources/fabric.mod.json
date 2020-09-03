@@ -4,13 +4,14 @@
   "version": "${version}",
 
   "name": "Home Camp",
-  "description": "Make a Soul Campfire your home.",
+  "description": "Make a Campfire your home.",
   "authors": [
     "The_Fireplace"
   ],
   "contact": {
     "homepage": "",
-    "sources": ""
+    "sources": "https://github.com/The-Fireplace-Minecraft-Mods/Home-Camp",
+    "issues": "https://github.com/The-Fireplace-Minecraft-Mods/Home-Camp/issues"
   },
 
   "license": "GPL-3.0-or-later",

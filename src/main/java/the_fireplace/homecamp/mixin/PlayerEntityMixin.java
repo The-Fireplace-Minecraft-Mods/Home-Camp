@@ -22,7 +22,7 @@ public abstract class PlayerEntityMixin {
 	@Inject(at = @At(value="HEAD"), method = "findRespawnPosition", cancellable = true)
 	private static void findRespawnPosition(ServerWorld world, BlockPos pos, float f, boolean bl, boolean bl2, CallbackInfoReturnable<Optional<Vec3d>> infoReturnable) {
 		BlockState state = world.getBlockState(pos);
-	    if((state.isOf(Blocks.SOUL_CAMPFIRE) || (HomeCamp.config.allowRegularCampfires && state.isOf(Blocks.CAMPFIRE)))
+	    if((state.isOf(Blocks.SOUL_CAMPFIRE) || (!HomeCamp.config.soulCampfiresOnly && state.isOf(Blocks.CAMPFIRE)))
 			&& (!HomeCamp.config.requireLitCampfire || CampfireBlock.isLitCampfire(state))) {
 	    	if(HomeCamp.config.extinguishOnSpawn) {
 				world.syncWorldEvent(null, 1009, pos, 0);

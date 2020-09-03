@@ -24,7 +24,7 @@ public class HomeCamp implements ModInitializer {
 			BlockState state = world.getBlockState(hitResult.getBlockPos());
 			if(!player.world.isClient()
 				&& player.isSneaking()
-				&& (state.isOf(Blocks.SOUL_CAMPFIRE) || (config.allowRegularCampfires && state.isOf(Blocks.CAMPFIRE)))
+				&& (state.isOf(Blocks.SOUL_CAMPFIRE) || (!config.soulCampfiresOnly && state.isOf(Blocks.CAMPFIRE)))
 				&& (!config.requireLitCampfire || CampfireBlock.isLitCampfire(state))
 				&& player.getActiveItem().equals(ItemStack.EMPTY)
 				&& player instanceof ServerPlayerEntity) {

@@ -5,7 +5,7 @@ import me.sargunvohra.mcmods.autoconfig1u.annotation.Config;
 
 @Config(name = HomeCamp.MODID)
 public class ModConfig implements ConfigData {
-    public boolean allowRegularCampfires = true;
+    public boolean soulCampfiresOnly = false;
     public boolean extinguishOnSpawn = true;
     public boolean requireLitCampfire = true;
 }
