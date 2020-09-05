@@ -87,4 +87,8 @@ curseforge {
 			}
 		}
 	}
+	options {
+        javaIntegration = false
+        forgeGradleIntegration = false
+    }
 }

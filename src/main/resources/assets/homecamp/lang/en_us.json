@@ -2,5 +2,5 @@
   "block.minecraft.spawn.not_valid": "Your spawn point was destroyed, obstructed, or otherwise inaccessible.",
   "text.autoconfig.homecamp.option.soulCampfiresOnly": "Soul Campfires Only",
   "text.autoconfig.homecamp.option.extinguishOnSpawn": "Extinguish On Spawn",
-  "text.autoconfig.homecamp.option.requireLitCampfires": "Require Lit Campfires"
+  "text.autoconfig.homecamp.option.requireLitCampfire": "Require Lit Campfires"
 }
