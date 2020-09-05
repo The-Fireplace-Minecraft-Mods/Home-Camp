@@ -1,2 +1,2 @@
-Fixed "Require Lit Campfire" option text in mod menu
-Fixed missing website link
+Fixed missing title in config GUI
+Add tooltips to config GUI
