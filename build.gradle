@@ -29,6 +29,8 @@ dependencies {
 	}
 	include "me.shedaniel.cloth:config-2:${project.clothconfig_version}"
 	include "me.sargunvohra.mcmods:autoconfig1u:${project.autoconfig_version}"
+
+	compile "com.google.code.findbugs:jsr305:3.0.2"
 }
 
 repositories {
