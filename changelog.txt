@@ -1,3 +1,1 @@
-Fixed missing title in config GUI
-Add tooltips to config GUI
-Added Simplified Chinese Localization (Samekichi)
+Allow loading on 1.16.3

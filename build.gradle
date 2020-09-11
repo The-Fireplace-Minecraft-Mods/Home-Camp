@@ -76,6 +76,7 @@ curseforge {
 		id = '406220'
 		changelog = file('changelog.txt')
 		releaseType = 'release'
+		addGameVersion '1.16.3'
 		addGameVersion '1.16.2'
 		addGameVersion 'Java 8'
 		addGameVersion 'Fabric'
