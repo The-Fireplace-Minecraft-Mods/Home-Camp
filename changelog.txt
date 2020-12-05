@@ -1,1 +1,1 @@
-Allow loading on 1.16.3
+Fixed sneak right click while holding an item setting spawnpoint (It should only happen with no item held)
