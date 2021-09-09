@@ -19,11 +19,12 @@ public class HomeCamp implements ModInitializer {
 
 		UseBlockCallback.EVENT.register((player, world, hand, hitResult) -> {
 			BlockState state = world.getBlockState(hitResult.getBlockPos());
-			if(!player.world.isClient()
+			if (!player.world.isClient()
 				&& player.isSneaking()
 				&& CampfireSpawnEligibility.canRespawnAtCampfire(state)
 				&& player.getStackInHand(hand).isEmpty()
-				&& player instanceof ServerPlayerEntity) {
+				&& player instanceof ServerPlayerEntity
+			) {
 				((ServerPlayerEntity) player).setSpawnPoint(world.getRegistryKey(), hitResult.getBlockPos(), player.yaw, true, true);
 				return ActionResult.SUCCESS;
 			}

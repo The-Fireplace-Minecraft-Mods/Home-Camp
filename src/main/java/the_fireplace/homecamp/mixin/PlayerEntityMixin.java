@@ -1,8 +1,9 @@
 package the_fireplace.homecamp.mixin;
 
+import dev.the_fireplace.annotateddi.api.DIContainer;
+import dev.the_fireplace.lib.api.teleport.injectables.SafePosition;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CampfireBlock;
-import net.minecraft.block.RespawnAnchorBlock;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.world.ServerWorld;
@@ -19,14 +20,15 @@ import java.util.Optional;
 
 @Mixin(PlayerEntity.class)
 public abstract class PlayerEntityMixin {
-	@Inject(at = @At(value="HEAD"), method = "findRespawnPosition", cancellable = true)
+	@Inject(at = @At("HEAD"), method = "findRespawnPosition", cancellable = true)
 	private static void findRespawnPosition(ServerWorld world, BlockPos pos, float f, boolean bl, boolean bl2, CallbackInfoReturnable<Optional<Vec3d>> infoReturnable) {
 		BlockState state = world.getBlockState(pos);
-	    if(CampfireSpawnEligibility.canRespawnAtCampfire(state)) {
-	    	if(HomeCamp.config.extinguishOnSpawn) {
+		if (CampfireSpawnEligibility.canRespawnAtCampfire(state)) {
+			if (HomeCamp.config.extinguishOnSpawn) {
 				extinguishCampfire(world, pos, state);
 			}
-			infoReturnable.setReturnValue(RespawnAnchorBlock.findRespawnPosition(EntityType.PLAYER, world, pos));
+			Optional<Vec3d> campfireRespawnPosition = DIContainer.get().getInstance(SafePosition.class).findBy(EntityType.PLAYER, world, pos);
+			infoReturnable.setReturnValue(campfireRespawnPosition);
 		}
 	}
 
