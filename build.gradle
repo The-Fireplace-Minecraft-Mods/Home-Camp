@@ -81,7 +81,7 @@ if (hasProperty('curseForgeApiKey')) {
 				relations {
 					requiredDependency 'fireplace-lib'
 					requiredDependency 'fabric-api'
-					requiredDependency 'cloth-config'
+					optionalDependency 'cloth-config'
 					optionalDependency 'modmenu'
 				}
 			}
