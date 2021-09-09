@@ -7,12 +7,12 @@ import the_fireplace.homecamp.domain.config.ConfigValues;
 public final class DefaultConfigValues implements ConfigValues {
     @Override
     public boolean isSoulCampfiresOnly() {
-        return true;
+        return false;
     }
 
     @Override
     public boolean isExtinguishOnSpawn() {
-        return false;
+        return true;
     }
 
     @Override
