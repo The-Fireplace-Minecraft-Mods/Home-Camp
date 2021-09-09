@@ -1,27 +1,22 @@
 package the_fireplace.homecamp;
 
-import me.shedaniel.autoconfig.AutoConfig;
-import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
-import net.fabricmc.api.ModInitializer;
+import com.google.inject.Injector;
+import dev.the_fireplace.annotateddi.api.entrypoints.DIModInitializer;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.minecraft.block.BlockState;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.ActionResult;
 
-public final class HomeCamp implements ModInitializer {
+public final class HomeCamp implements DIModInitializer {
 	public static final String MODID = "homecamp";
-	public static ModConfig config;
 
 	@Override
-	public void onInitialize() {
-		AutoConfig.register(ModConfig.class, JanksonConfigSerializer::new);
-		config = AutoConfig.getConfigHolder(ModConfig.class).getConfig();
-
+	public void onInitialize(Injector diContainer) {
 		UseBlockCallback.EVENT.register((player, world, hand, hitResult) -> {
 			BlockState state = world.getBlockState(hitResult.getBlockPos());
 			if (!player.world.isClient()
 				&& player.isSneaking()
-				&& CampfireSpawnEligibility.canRespawnAtCampfire(state)
+				&& diContainer.getInstance(CampfireSpawnEligibility.class).canRespawnAtCampfire(state)
 				&& player.getStackInHand(hand).isEmpty()
 				&& player instanceof ServerPlayerEntity
 			) {

@@ -21,7 +21,7 @@ public final class PlayerEntityMixin {
 	@Inject(at = @At("HEAD"), method = "findRespawnPosition", cancellable = true)
 	private static void findRespawnPosition(ServerWorld world, BlockPos pos, float f, boolean bl, boolean bl2, CallbackInfoReturnable<Optional<Vec3d>> infoReturnable) {
 		BlockState state = world.getBlockState(pos);
-		if (CampfireSpawnEligibility.canRespawnAtCampfire(state)) {
+		if (DIContainer.get().getInstance(CampfireSpawnEligibility.class).canRespawnAtCampfire(state)) {
 			Optional<Vec3d> campfireRespawnPosition = DIContainer.get().getInstance(SafePosition.class).findBy(EntityType.PLAYER, world, pos);
 			infoReturnable.setReturnValue(campfireRespawnPosition);
 		}

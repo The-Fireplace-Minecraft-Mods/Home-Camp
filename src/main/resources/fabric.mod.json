@@ -15,12 +15,13 @@
   "license": "MPL-2.0",
   "icon": "assets/homecamp/icon.png",
   "environment": "*",
+
   "entrypoints": {
-    "main": [
+    "di-main": [
       "the_fireplace.homecamp.HomeCamp"
     ],
     "modmenu": [
-      "the_fireplace.homecamp.client.ModMenuIntegration"
+      "the_fireplace.homecamp.entrypoints.ModMenuEntrypoint"
     ]
   },
   "mixins": [
@@ -28,7 +29,6 @@
   ],
   "depends": {
     "fabricloader": ">=0.7.4",
-    "fabric": "*",
     "fabric-events-interaction-v0": "*",
     "minecraft": ">=1.16.2 <1.17",
     "fireplacelib": ">=5.7 <6"

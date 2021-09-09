@@ -1,10 +1,10 @@
 {
   "block.minecraft.spawn.not_valid": "你的重生点已被破坏，阻挡，或无法抵达。",
-  "text.autoconfig.homecamp.title": "营火为家配置 §6(Home Camp)",
-  "text.autoconfig.homecamp.option.soulCampfiresOnly": "仅灵魂营火",
-  "text.autoconfig.homecamp.option.soulCampfiresOnly.@Tooltip": "如果设置为 True, 则只有灵魂营火可以被用于设置重生点。",
-  "text.autoconfig.homecamp.option.extinguishOnSpawn": "重生时熄灭",
-  "text.autoconfig.homecamp.option.extinguishOnSpawn.@Tooltip": "如果设置为 True, 则当你在营火旁边重生后, 营火会熄灭。",
-  "text.autoconfig.homecamp.option.requireLitCampfire": "需要点燃的营火",
-  "text.autoconfig.homecamp.option.requireLitCampfire.@Tooltip": "如果设置为 True, 则营火只有在被点燃时允许你重生在它旁边。"
+  "text.config.homecamp.title": "营火为家配置 §6(Home Camp)",
+  "text.config.homecamp.option.soulCampfiresOnly": "仅灵魂营火",
+  "text.config.homecamp.option.soulCampfiresOnly.desc": "如果设置为 True, 则只有灵魂营火可以被用于设置重生点。",
+  "text.config.homecamp.option.extinguishOnSpawn": "重生时熄灭",
+  "text.config.homecamp.option.extinguishOnSpawn.desc": "如果设置为 True, 则当你在营火旁边重生后, 营火会熄灭。",
+  "text.config.homecamp.option.requireLitCampfire": "需要点燃的营火",
+  "text.config.homecamp.option.requireLitCampfire.desc": "如果设置为 True, 则营火只有在被点燃时允许你重生在它旁边。"
 }
