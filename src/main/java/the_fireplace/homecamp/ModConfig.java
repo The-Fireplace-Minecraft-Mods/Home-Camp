@@ -5,7 +5,7 @@ import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 
 @Config(name = HomeCamp.MODID)
-public class ModConfig implements ConfigData {
+public final class ModConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public boolean soulCampfiresOnly = false;
     @ConfigEntry.Gui.Tooltip

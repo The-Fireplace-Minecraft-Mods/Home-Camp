@@ -4,7 +4,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.CampfireBlock;
 
-public class CampfireSpawnEligibility {
+public final class CampfireSpawnEligibility {
     public static boolean canRespawnAtCampfire(BlockState state) {
         return isSpawnCampfire(state) && meetsLitCampfireRequirement(state);
     }

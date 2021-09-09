@@ -8,7 +8,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.ActionResult;
 
-public class HomeCamp implements ModInitializer {
+public final class HomeCamp implements ModInitializer {
 	public static final String MODID = "homecamp";
 	public static ModConfig config;
 
