@@ -2,9 +2,8 @@
   "schemaVersion": 1,
   "id": "homecamp",
   "version": "${version}",
-
   "name": "Home Camp",
-  "description": "Make a Campfire your home.",
+  "description": "Make a Campfire your respawn point.",
   "authors": [
     "The_Fireplace"
   ],
@@ -13,10 +12,8 @@
     "sources": "https://github.com/The-Fireplace-Minecraft-Mods/Home-Camp",
     "issues": "https://github.com/The-Fireplace-Minecraft-Mods/Home-Camp/issues"
   },
-
-  "license": "GPL-3.0-or-later",
+  "license": "MPL-2.0",
   "icon": "assets/homecamp/icon.png",
-
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -29,15 +26,21 @@
   "mixins": [
     "homecamp.mixins.json"
   ],
-
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
     "fabric-events-interaction-v0": "*",
-    "minecraft": ">=1.16.2"
+    "minecraft": ">=1.16.2 <1.17",
+    "fireplacelib": ">=5.7 <6"
   },
-
   "suggests": {
-    "modmenu":  ">=4.0.0"
+    "modmenu": "*"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/QXQYPj5"
+      }
+    }
   }
 }
