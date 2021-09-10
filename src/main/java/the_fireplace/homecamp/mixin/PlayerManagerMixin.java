@@ -34,7 +34,7 @@ public final class PlayerManagerMixin {
 
     private static void extinguishCampfire(ServerWorld world, BlockPos pos, BlockState state) {
         world.syncWorldEvent(null, 1009, pos, 0);
-        CampfireBlock.extinguish(world, pos, state);
+        CampfireBlock.extinguish(null, world, pos, state);
         world.setBlockState(pos, state.with(CampfireBlock.LIT, false));
     }
 }

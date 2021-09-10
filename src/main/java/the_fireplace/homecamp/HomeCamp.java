@@ -20,7 +20,7 @@ public final class HomeCamp implements DIModInitializer {
 				&& player.getStackInHand(hand).isEmpty()
 				&& player instanceof ServerPlayerEntity
 			) {
-				((ServerPlayerEntity) player).setSpawnPoint(world.getRegistryKey(), hitResult.getBlockPos(), player.yaw, true, true);
+				((ServerPlayerEntity) player).setSpawnPoint(world.getRegistryKey(), hitResult.getBlockPos(), player.getYaw(), true, true);
 				return ActionResult.SUCCESS;
 			}
 			return ActionResult.PASS;
