@@ -1,2 +1,1 @@
-Fixed campfire being extinguished by spawn point lookup instead of after respawn
-Mod now requires Fireplace Lib
+Fixed spawning error when no spawn point has been set
