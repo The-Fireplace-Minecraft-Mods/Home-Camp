@@ -17,7 +17,8 @@ import the_fireplace.homecamp.CampfireSpawnEligibility;
 import java.util.Optional;
 
 @Mixin(PlayerEntity.class)
-public final class PlayerEntityMixin {
+public final class PlayerEntityMixin
+{
 	@Inject(at = @At("HEAD"), method = "findRespawnPosition", cancellable = true)
 	private static void findRespawnPosition(ServerWorld world, BlockPos pos, float f, boolean bl, boolean bl2, CallbackInfoReturnable<Optional<Vec3d>> infoReturnable) {
 		BlockState state = world.getBlockState(pos);

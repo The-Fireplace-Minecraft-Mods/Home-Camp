@@ -7,7 +7,8 @@ import net.minecraft.block.BlockState;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.ActionResult;
 
-public final class HomeCamp implements DIModInitializer {
+public final class HomeCamp implements DIModInitializer
+{
 	public static final String MODID = "homecamp";
 
 	@Override

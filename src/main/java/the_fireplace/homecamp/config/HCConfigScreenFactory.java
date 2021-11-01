@@ -15,7 +15,8 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 @Environment(EnvType.CLIENT)
-public final class HCConfigScreenFactory {
+public final class HCConfigScreenFactory
+{
     private static final String TRANSLATION_BASE = "text.config." + HomeCamp.MODID + ".";
     private static final String OPTION_TRANSLATION_BASE = TRANSLATION_BASE + "option.";
 
@@ -29,11 +30,11 @@ public final class HCConfigScreenFactory {
 
     @Inject
     public HCConfigScreenFactory(
-            TranslatorFactory translatorFactory,
-            ConfigStateManager configStateManager,
-            HCConfig config,
-            @Named("default") ConfigValues defaultConfigValues,
-            ConfigScreenBuilderFactory configScreenBuilderFactory
+        TranslatorFactory translatorFactory,
+        ConfigStateManager configStateManager,
+        HCConfig config,
+        @Named("default") ConfigValues defaultConfigValues,
+        ConfigScreenBuilderFactory configScreenBuilderFactory
     ) {
         this.translator = translatorFactory.getTranslator(HomeCamp.MODID);
         this.configStateManager = configStateManager;
@@ -44,11 +45,11 @@ public final class HCConfigScreenFactory {
 
     public Screen getConfigScreen(Screen parent) {
         this.configScreenBuilder = configScreenBuilderFactory.create(
-                translator,
-                TRANSLATION_BASE + "title",
-                TRANSLATION_BASE + "general",
-                parent,
-                () -> configStateManager.save(config)
+            translator,
+            TRANSLATION_BASE + "title",
+            TRANSLATION_BASE + "general",
+            parent,
+            () -> configStateManager.save(config)
         );
         addGeneralCategoryEntries();
 
@@ -57,31 +58,30 @@ public final class HCConfigScreenFactory {
 
     private void addGeneralCategoryEntries() {
         configScreenBuilder.addBoolToggle(
-                OPTION_TRANSLATION_BASE + "soulCampfiresOnly",
-                config.isSoulCampfiresOnly(),
-                defaultConfigValues.isSoulCampfiresOnly(),
-                config::setSoulCampfiresOnly
+            OPTION_TRANSLATION_BASE + "soulCampfiresOnly",
+            config.isSoulCampfiresOnly(),
+            defaultConfigValues.isSoulCampfiresOnly(),
+            config::setSoulCampfiresOnly
         );
         configScreenBuilder.addBoolToggle(
-                OPTION_TRANSLATION_BASE + "extinguishOnSpawn",
-                config.isExtinguishOnSpawn(),
-                defaultConfigValues.isExtinguishOnSpawn(),
-                config::setExtinguishOnSpawn
+            OPTION_TRANSLATION_BASE + "extinguishOnSpawn",
+            config.isExtinguishOnSpawn(),
+            defaultConfigValues.isExtinguishOnSpawn(),
+            config::setExtinguishOnSpawn
         );
         configScreenBuilder.addBoolToggle(
-                OPTION_TRANSLATION_BASE + "requireLitCampfire",
-                config.isRequireLitCampfire(),
-                defaultConfigValues.isRequireLitCampfire(),
-                config::setRequireLitCampfire
+            OPTION_TRANSLATION_BASE + "requireLitCampfire",
+            config.isRequireLitCampfire(),
+            defaultConfigValues.isRequireLitCampfire(),
+            config::setRequireLitCampfire
         );
         configScreenBuilder.addIntSlider(
-                OPTION_TRANSLATION_BASE + "mobsNoSpawnRegion",
-                config.noMobSpawnRegion(),
-                defaultConfigValues.noMobSpawnRegion(),
-                config::setNoMobSpawnRegion,
-                0,
-                256
+            OPTION_TRANSLATION_BASE + "mobsNoSpawnRegion",
+            config.noMobSpawnRegion(),
+            defaultConfigValues.noMobSpawnRegion(),
+            config::setNoMobSpawnRegion,
+            0,
+            256
         );
-
     }
 }

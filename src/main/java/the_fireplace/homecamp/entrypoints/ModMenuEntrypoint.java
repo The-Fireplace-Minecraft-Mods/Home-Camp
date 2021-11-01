@@ -8,7 +8,8 @@ import net.fabricmc.api.Environment;
 import the_fireplace.homecamp.config.HCConfigScreenFactory;
 
 @Environment(EnvType.CLIENT)
-public final class ModMenuEntrypoint implements ModMenuApi {
+public final class ModMenuEntrypoint implements ModMenuApi
+{
     private final HCConfigScreenFactory configScreenFactory = DIContainer.get().getInstance(HCConfigScreenFactory.class);
 
     @Override
