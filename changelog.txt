@@ -1,1 +1,3 @@
-Fixed spawning error when no spawn point has been set
+Added option for protection radius around campfires (CaioMGT)
+Added Brazilian Portuguese support (CaioMGT)
+Fixed a performance issue with config loading

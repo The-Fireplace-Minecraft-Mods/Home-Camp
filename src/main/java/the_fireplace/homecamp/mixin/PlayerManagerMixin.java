@@ -17,7 +17,8 @@ import the_fireplace.homecamp.domain.config.ConfigValues;
 import javax.annotation.Nullable;
 
 @Mixin(PlayerManager.class)
-public final class PlayerManagerMixin {
+public final class PlayerManagerMixin
+{
     @Inject(at = @At("RETURN"), method = "respawnPlayer", locals = LocalCapture.CAPTURE_FAILSOFT)
     private void extinguishCampfireAfterSpawning(
         ServerPlayerEntity player,

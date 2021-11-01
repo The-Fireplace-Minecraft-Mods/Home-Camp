@@ -1,6 +1,7 @@
 package the_fireplace.homecamp.domain.config;
 
-public interface ConfigValues {
+public interface ConfigValues
+{
     boolean isSoulCampfiresOnly();
 
     boolean isExtinguishOnSpawn();

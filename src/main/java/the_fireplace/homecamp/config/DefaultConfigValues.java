@@ -4,7 +4,8 @@ import dev.the_fireplace.annotateddi.api.di.Implementation;
 import the_fireplace.homecamp.domain.config.ConfigValues;
 
 @Implementation(name = "default")
-public final class  DefaultConfigValues implements ConfigValues {
+public final class DefaultConfigValues implements ConfigValues
+{
     @Override
     public boolean isSoulCampfiresOnly() {
         return false;
@@ -19,6 +20,9 @@ public final class  DefaultConfigValues implements ConfigValues {
     public boolean isRequireLitCampfire() {
         return true;
     }
+
     @Override
-    public int noMobSpawnRegion(){return 32;}
+    public int noMobSpawnRegion() {
+        return 32;
+    }
 }

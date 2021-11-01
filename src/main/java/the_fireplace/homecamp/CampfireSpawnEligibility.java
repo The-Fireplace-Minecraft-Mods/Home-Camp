@@ -7,8 +7,8 @@ import the_fireplace.homecamp.domain.config.ConfigValues;
 
 import javax.inject.Inject;
 
-public final class CampfireSpawnEligibility {
-
+public final class CampfireSpawnEligibility
+{
     private final ConfigValues configValues;
 
     @Inject

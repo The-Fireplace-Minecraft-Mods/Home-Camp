@@ -14,7 +14,8 @@ import javax.inject.Singleton;
 
 @Implementation("the_fireplace.homecamp.domain.config.ConfigValues")
 @Singleton
-public final class HCConfig implements ConfigValues, Config {
+public final class HCConfig implements ConfigValues, Config
+{
     private boolean soulCampfiresOnly;
     private boolean extinguishOnSpawn;
     private boolean requireLitCampfire;
@@ -70,12 +71,15 @@ public final class HCConfig implements ConfigValues, Config {
     public void setRequireLitCampfire(boolean requireLitCampfire) {
         this.requireLitCampfire = requireLitCampfire;
     }
-    public int noMobSpawnRegion(){
+
+    public int noMobSpawnRegion() {
         return noMobSpawnRegion;
     }
-    public void setNoMobSpawnRegion(int spawnRegion){
+
+    public void setNoMobSpawnRegion(int spawnRegion) {
         this.noMobSpawnRegion = spawnRegion;
     }
+
     @Override
     public String getId() {
         return HomeCamp.MODID;
