@@ -6,4 +6,6 @@ public interface ConfigValues {
     boolean isExtinguishOnSpawn();
 
     boolean isRequireLitCampfire();
+
+    int noMobSpawnRegion();
 }
