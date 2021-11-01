@@ -7,5 +7,7 @@
   "text.config.homecamp.option.extinguishOnSpawn": "Extinguish On Spawn",
   "text.config.homecamp.option.extinguishOnSpawn.desc": "If true, the campfire will be extinguished when the player spawns there.",
   "text.config.homecamp.option.requireLitCampfire": "Require Lit Campfires",
-  "text.config.homecamp.option.requireLitCampfire.desc": "If true, campfires can only be spawned at if they are lit."
+  "text.config.homecamp.option.requireLitCampfire.desc": "If true, campfires can only be spawned at if they are lit.",
+  "text.config.homecamp.option.mobsNoSpawnRegion": "Mob Protection Radius",
+  "text.config.homecamp.option.mobsNoSpawnRegion.desc": "The radius, in blocks, of the area your campfire protects."
 }
