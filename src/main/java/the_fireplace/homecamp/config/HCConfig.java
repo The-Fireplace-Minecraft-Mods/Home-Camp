@@ -10,12 +10,15 @@ import the_fireplace.homecamp.domain.config.ConfigValues;
 
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.inject.Singleton;
 
 @Implementation("the_fireplace.homecamp.domain.config.ConfigValues")
+@Singleton
 public final class HCConfig implements ConfigValues, Config {
     private boolean soulCampfiresOnly;
     private boolean extinguishOnSpawn;
     private boolean requireLitCampfire;
+    private int noMobSpawnRegion;
 
     private final ConfigValues defaultConfig;
 
@@ -30,6 +33,7 @@ public final class HCConfig implements ConfigValues, Config {
         soulCampfiresOnly = buffer.readBool("soulCampfiresOnly", defaultConfig.isSoulCampfiresOnly());
         extinguishOnSpawn = buffer.readBool("extinguishOnSpawn", defaultConfig.isExtinguishOnSpawn());
         requireLitCampfire = buffer.readBool("requireLitCampfire", defaultConfig.isRequireLitCampfire());
+        noMobSpawnRegion = buffer.readInt("noMobSpawnRegion", defaultConfig.noMobSpawnRegion());
     }
 
     @Override
@@ -37,6 +41,7 @@ public final class HCConfig implements ConfigValues, Config {
         buffer.writeBool("soulCampfiresOnly", soulCampfiresOnly);
         buffer.writeBool("extinguishOnSpawn", extinguishOnSpawn);
         buffer.writeBool("requireLitCampfire", requireLitCampfire);
+        buffer.writeInt("noMobSpawnRegion", noMobSpawnRegion);
     }
 
     @Override
@@ -65,7 +70,12 @@ public final class HCConfig implements ConfigValues, Config {
     public void setRequireLitCampfire(boolean requireLitCampfire) {
         this.requireLitCampfire = requireLitCampfire;
     }
-
+    public int noMobSpawnRegion(){
+        return noMobSpawnRegion;
+    }
+    public void setNoMobSpawnRegion(int spawnRegion){
+        this.noMobSpawnRegion = spawnRegion;
+    }
     @Override
     public String getId() {
         return HomeCamp.MODID;
