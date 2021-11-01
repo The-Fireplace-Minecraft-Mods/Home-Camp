@@ -1,0 +1,13 @@
+{
+  "block.minecraft.spawn.not_valid": "Voce nao tem cama ou ancora de renascimento carregada, ou estao obstruidas",
+  "text.config.homecamp.title": "Configuração do HomeCamp",
+  "text.config.homecamp.general": "Geral",
+  "text.config.homecamp.option.soulCampfiresOnly": "Somente Fogueira das Almas",
+  "text.config.homecamp.option.soulCampfiresOnly.desc": "Se verdadeiro, somente Fogueira das Almas podem ser usadas como ponto de renascimento.",
+  "text.config.homecamp.option.extinguishOnSpawn": "Extinguir ao nasce",
+  "text.config.homecamp.option.extinguishOnSpawn.desc": "Se verdadeiro, a Fogueira sera extinguida quando o jogador renascer.",
+  "text.config.homecamp.option.requireLitCampfire": "Requer Fogueiras acesas",
+  "text.config.homecamp.option.requireLitCampfire.desc": "Se verdadeiro, Fogueiras somente serão usadas como ponto de renascimento se estiverem acesas.",
+  "text.config.homecamp.option.mobsNoSpawnRegion": "Area de protecao contra mobs",
+  "text.config.homecamp.option.mobsNoSpawnRegion.desc": "A area, medida em blocos, que sua Fogueira ira proteger."
+}
