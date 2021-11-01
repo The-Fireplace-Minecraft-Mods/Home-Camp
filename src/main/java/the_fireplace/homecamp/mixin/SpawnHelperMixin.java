@@ -35,6 +35,9 @@ public abstract class SpawnHelperMixin
     ) {
         if (SpawnGroup.MONSTER.equals(group)) {
             int radius = DIContainer.get().getInstance(ConfigValues.class).noMobSpawnRegion();
+            if (radius == 0) {
+                return;
+            }
 
             int minX = ChunkSectionPos.getSectionCoord(blockPos.getX() - radius);
             int minZ = ChunkSectionPos.getSectionCoord(blockPos.getZ() - radius);
