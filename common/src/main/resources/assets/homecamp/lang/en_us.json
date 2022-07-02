@@ -1,0 +1,14 @@
+{
+    "modmenu.descriptionTranslation.homecamp": "${mod_description}",
+    "block.minecraft.spawn.not_valid": "Your spawn point was destroyed, obstructed, or otherwise inaccessible.",
+    "text.config.homecamp.title": "Home Camp Config",
+    "text.config.homecamp.general": "General",
+    "text.config.homecamp.option.soulCampfiresOnly": "Soul Campfires Only",
+    "text.config.homecamp.option.soulCampfiresOnly.desc": "If true, only Soul Campfires can be used as a spawnpoint.",
+    "text.config.homecamp.option.extinguishOnSpawn": "Extinguish On Spawn",
+    "text.config.homecamp.option.extinguishOnSpawn.desc": "If true, the campfire will be extinguished when the player spawns there.",
+    "text.config.homecamp.option.requireLitCampfire": "Require Lit Campfires",
+    "text.config.homecamp.option.requireLitCampfire.desc": "If true, campfires can only be spawned at if they are lit.",
+    "text.config.homecamp.option.mobsNoSpawnRegion": "Mob Protection Radius",
+  "text.config.homecamp.option.mobsNoSpawnRegion.desc": "The radius, in blocks, of the area your campfire protects."
+}
