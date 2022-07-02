@@ -1,1 +1,1 @@
-Update to require Fabric Loader >=0.12
+Update to use Fireplace Lib 7 / Annotated DI 4
