@@ -37,7 +37,10 @@
   "custom": {
     "modmenu": {
       "links": {
-        "modmenu.discord": "https://discord.gg/QXQYPj5"
+          "modmenu.discord": "${discord_url}",
+          "annotateddi.twitter": "${twitter_url}",
+          "annotateddi.kofi": "${kofi_url}",
+          "annotateddi.patreon": "${patreon_url}"
       }
     }
   }
