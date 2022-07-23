@@ -7,7 +7,7 @@ import net.minecraft.core.SectionPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.NaturalSpawner;
-import net.minecraft.world.level.StructureFeatureManager;
+import net.minecraft.world.level.StructureManager;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CampfireBlock;
@@ -26,7 +26,7 @@ public abstract class SpawnHelperMixin
     private static void handleCustomSpawnRestriction(
         ServerLevel world,
         MobCategory group,
-        StructureFeatureManager pAccessor,
+        StructureManager pAccessor,
         ChunkGenerator chunkGenerator,
         MobSpawnSettings.SpawnerData spawnEntry,
         BlockPos.MutableBlockPos blockPos,
