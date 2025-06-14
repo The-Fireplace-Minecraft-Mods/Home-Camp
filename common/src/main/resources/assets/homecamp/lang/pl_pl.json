@@ -1,5 +1,5 @@
 {
-    "modmenu.descriptionTranslation.homecamp": "${mod_description}",
+    "modmenu.descriptionTranslation.homecamp": "Uczyń ognisko swoim punktem odrodzenia.",
     "block.minecraft.spawn.not_valid": "Twój punkt odrodzenia został zniszczony, zablokowany lub w inny sposób stał się niedostępny.",
     "text.config.homecamp.title": "Konfiguracja Home Camp",
     "text.config.homecamp.general": "Ogólne",
