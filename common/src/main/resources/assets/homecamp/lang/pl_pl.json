@@ -1,0 +1,14 @@
+{
+    "modmenu.descriptionTranslation.homecamp": "Uczyń ognisko swoim punktem odrodzenia.",
+    "block.minecraft.spawn.not_valid": "Twój punkt odrodzenia został zniszczony, zablokowany lub w inny sposób stał się niedostępny.",
+    "text.config.homecamp.title": "Konfiguracja Home Camp",
+    "text.config.homecamp.general": "Ogólne",
+    "text.config.homecamp.option.soulCampfiresOnly": "Tylko ogniska dusz",
+    "text.config.homecamp.option.soulCampfiresOnly.desc": "Jeśli włączone, tylko ogniska dusz mogą służyć jako punkt odrodzenia.",
+    "text.config.homecamp.option.extinguishOnSpawn": "Gaszenie przy odrodzeniu",
+    "text.config.homecamp.option.extinguishOnSpawn.desc": "Jeśli włączone, ognisko zostanie zgaszone, gdy gracz się przy nim odrodzi.",
+    "text.config.homecamp.option.requireLitCampfire": "Wymagane zapalone ognisko",
+    "text.config.homecamp.option.requireLitCampfire.desc": "Jeśli włączone, odradzanie możliwe tylko przy zapalonych ogniskach.",
+    "text.config.homecamp.option.mobsNoSpawnRegion": "Promień ochrony przed mobami",
+  "text.config.homecamp.option.mobsNoSpawnRegion.desc": "Promień (w blokach), w którym ognisko chroni przed pojawianiem się mobów."
+}
